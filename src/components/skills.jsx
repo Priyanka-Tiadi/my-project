@@ -1,14 +1,16 @@
-const Skills=()=>{
-  const skills= ["React Js", "Node Js", "MongoDb","CSS"]
-  return(
-    <section id="skills">
-      <h2 className="text-3xl font-bold mb-4 text-teal-400">skills</h2>
-      <ul className="grid grid-cols-2 gap-4 text-lg">
-        {skills.map((skill)=>(
-        <li key={skill} className="bg-gray-800 px-4 py-2 roundend">{skill}</li>
+export default function Skills() {
+  const skills = ["React", "Node.js", "Express", "MongoDB", "JavaScript", "Tailwind CSS", "MySQL"];
+
+  return (
+    <section id="skills" className="pt-20 pb-10 border-b border-gray-700">
+      <h2 className="text-3xl font-bold text-teal-400 mb-4">Skills</h2>
+      <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300">
+        {skills.map((skill, i) => (
+          <li key={i} className="bg-gray-700 p-2 rounded text-center hover:bg-teal-500 transition">
+            {skill}
+          </li>
         ))}
-        </ul>
+      </ul>
     </section>
-  )
+  );
 }
-export default Skills;
